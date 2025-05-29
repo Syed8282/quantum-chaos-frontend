@@ -423,7 +423,7 @@
       try {
         statusText.textContent = "Starting...";
         statusDot.classList.remove('stopped');
-        const res = await fetch('https://quantum-chaos-backend.onrender.com', { method: 'POST' });
+        const res = await fetch('https://quantum-chaos-backend.onrender.com/start', { method: 'POST' });
         const data = await res.json();
         balls = data.balls;
         collisionCounter = data.collisionCount;
