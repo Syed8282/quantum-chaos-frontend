@@ -423,7 +423,7 @@
       try {
         statusText.textContent = "Starting...";
         statusDot.classList.remove('stopped');
-        const res = await fetch('http://localhost:3000/start', { method: 'POST' });
+        const res = await fetch('https://quantum-chaos-backend.onrender.com', { method: 'POST' });
         const data = await res.json();
         balls = data.balls;
         collisionCounter = data.collisionCount;
@@ -444,7 +444,7 @@
       if (!isRunning) return;
       
       try {
-        const res = await fetch('http://localhost:3000/step', { method: 'POST' });
+        const res = await fetch('https://quantum-chaos-backend.onrender.com/step', { method: 'POST' });
         const data = await res.json();
         balls = data.balls;
         entropyValue = data.hash || entropyValue;
